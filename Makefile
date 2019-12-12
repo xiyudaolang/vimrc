@@ -25,7 +25,7 @@ clean:
 install:
 	mv vimrc ~/.vimrc
 	mv vimrc.plug ~/.vimrc.plug
-	mkdir -p ~/.vim/autoload
+	mv vimrc.sign ~/.vimrc.sign
 	mv colors ~/.vim/colors
 	mv ycm-plugin ~/.vim/ycm-plugin
 	vim -c ':PlugInstall'
