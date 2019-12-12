@@ -23,8 +23,9 @@ clean:
 	rm $HOME/.vimrc.plug
 
 install:
-	ln -s ./vimrc ~/.vimrc
-	ln -s ./vimrc.plug ~/.vimrc.plug
+	mv ./vimrc ~/.vimrc
+	mv ./vimrc.plug ~/.vimrc.plug
 	mkdir -p ~/.vim/autoload
-	ln -s ./colors ~/.vim/colors
-	ln -s ./ycm-plugin ~/.vim/ycm-plugin
+	mv ./colors ~/.vim/colors
+	mv ./ycm-plugin ~/.vim/ycm-plugin
+	vim -c ':PlugInstall'
