@@ -28,4 +28,3 @@ install:
 	mkdir -p ~/.vim/autoload
 	ln -s ./colors ~/.vim/colors
 	ln -s ./ycm-plugin ~/.vim/ycm-plugin
-	vim -c ':PlugInstall'
