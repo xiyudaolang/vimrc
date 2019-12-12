@@ -1,5 +1,37 @@
 " loaded the vundle settings
-source ~/.vimrc.plug
+" source ~/.vimrc.plug
+
+" settings for vundle the vim plugin manager
+set shell=/bin/bash           " there are wired errors on Mac with fishshell
+set nocompatible              " be improved, required
+call plug#begin('~/.vim/plugged')
+
+" Customed plugin at here
+"=====================================
+Plug 'bling/vim-airline'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
+Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
+Plug 'Chiel92/vim-autoformat'
+Plug 'jiangmiao/auto-pairs'
+Plug 'plasticboy/vim-markdown' | Plug 'godlygeek/tabular'
+Plug 'iamcco/markdown-preview.vim'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ryanoasis/vim-devicons'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'rust-lang/rust.vim'
+"=====================================
+
+" Initialize plugin system
+call plug#end()
+
 source ~/.vimrc.sign
 
 " slient python 3
